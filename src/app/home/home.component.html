@@ -1,0 +1,6 @@
+<div *ngIf="this.oidcSecurityService.getToken()">
+    <button (click)="logout()">Logout</button>
+</div>
+<div *ngIf="!this.oidcSecurityService.getToken()">
+    <button (click)="login()">Login</button>
+</div>
